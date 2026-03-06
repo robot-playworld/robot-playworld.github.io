@@ -1,0 +1,5 @@
+1. Banner video (horizontal). 2~3 sentences below summarizing core contributions (the current text you have is pretty good).
+2. Collecting Play Data. Will have 3-4 videos illustrating what play data looks like (probably arranged in a grid/row), a square-ish illustration explaining how our design works, and a paragraph explaining: what is play data, why we want it, and key features from our system.
+3. Dynamics prediction: we have a few categories (about 6), each category has 3 videos: gt, baseline, playworld pred. each size is about 640 * 480.
+4. Policy evaluation. Available videos I have are: for each policy: gt result, baseline result, and playworld result. each video is of size (192 * 320) (tall video). drop down list to select policy (policy 1/2/3)
+5. RL fine-tuning. 2 videos per task: one on policy before ft, one on after. video shape is about 640*480.
