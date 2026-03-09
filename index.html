@@ -111,6 +111,9 @@
         </div>
         <button type="button" onclick="scrollPlayData(1)" aria-label="Scroll play data right" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); z-index: 2; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #d5d5d5; background: rgba(255,255,255,0.95); cursor: pointer; font-size: 20px; line-height: 1;">&#8250;</button>
       </div>
+      <div style="margin-top: 1rem;">
+        <video autoplay muted loop playsinline preload="none" data-src="./videos/1_play_data/play_column_speedup.mp4" style="width: 100%; border-radius: 10px;"></video>
+      </div>
       <div class="columns is-variable is-4" style="margin-top: 0.6rem; align-items: flex-start;">
         <div class="column is-half">
           <img src="./images/play_data/data_collection_system.png" alt="Play data collection system diagram" style="width: 100%; border-radius: 10px; border: 1px solid #ececec; display: block;">
@@ -126,7 +129,7 @@
   <section class="section" id="dynamics-prediction">
     <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
       <h2 class="title is-3 has-text-centered">Dynamics Prediction</h2>
-      <p class="figure-caption" style="width: 95%; text-align: left; margin-bottom: 0.75rem;">The diverse interactions present in PlayWorld data enable the model to learn richer physical dynamics, resulting in predictions that more closely match real-world object behavior. Below, we provide side-by-side comparisons showing that PlayWorld predictions closely track ground-truth outcomes across interaction types, while baseline models often exhibit degraded object fidelity and unrealistic physics. (todo update videos)</p>
+      <p class="figure-caption" style="width: 95%; text-align: left; margin-bottom: 0.75rem;">The diverse interactions present in PlayWorld data enable the model to learn richer physical dynamics, resulting in predictions that more closely match real-world object behavior. Below, we provide side-by-side comparisons showing that PlayWorld predictions closely track ground-truth outcomes across interaction types, while baseline models often exhibit degraded object fidelity and unrealistic physics.</p>
       <div style="display: flex; gap: 0.1rem; align-items: stretch; margin-top: 0.4rem;">
         <div style="display: grid; grid-template-rows: repeat(3, 1fr); gap: 0.65rem; align-items: center; padding-top: 2.1rem; flex: 0 0 30px;">
           <div style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; font-weight: 700; color: #374151; font-size: 0.84rem; letter-spacing: 0.02em;">GT</div>
@@ -136,13 +139,21 @@
 
         <div style="position: relative; flex: 1; overflow: hidden;">
           <button type="button" onclick="scrollDynamics(-1)" aria-label="Scroll dynamics left" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); z-index: 2; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #d5d5d5; background: rgba(255,255,255,0.95); cursor: pointer; font-size: 20px; line-height: 1;">&#8249;</button>
-          <div id="dynamics-strip" style="display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 4rem) / 5); gap: 1rem; overflow-x: auto; padding: 0 2rem 0.35rem 0.35rem; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+          <div id="dynamics-strip" style="display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 4rem) / 5); gap: 1rem; overflow-x: auto; padding: 0 2rem 0 0.35rem; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
             <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
               <p class="video-label">Success</p>
               <div style="display: grid; gap: 0.65rem;">
                 <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_success.mp4" style="width: 100%;"></video>
                 <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_success.mp4" style="width: 100%;"></video>
                 <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_success.mp4" style="width: 100%;"></video>
+              </div>
+            </div>
+            <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
+              <p class="video-label">Collision</p>
+              <div style="display: grid; gap: 0.65rem;">
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_collision.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_collision.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_collision.mp4" style="width: 100%;"></video>
               </div>
             </div>
             <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
@@ -170,11 +181,43 @@
               </div>
             </div>
             <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
+              <p class="video-label">Success</p>
+              <div style="display: grid; gap: 0.65rem;">
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_success2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_success2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_success2.mp4" style="width: 100%;"></video>
+              </div>
+            </div>
+            <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
               <p class="video-label">Collision</p>
               <div style="display: grid; gap: 0.65rem;">
-                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_collision.mp4" style="width: 100%;"></video>
-                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_collision.mp4" style="width: 100%;"></video>
-                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_collision.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_collision2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_collision2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_collision2.mp4" style="width: 100%;"></video>
+              </div>
+            </div>
+            <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
+              <p class="video-label">Deformation</p>
+              <div style="display: grid; gap: 0.65rem;">
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_deform2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_deform2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_deform2.mp4" style="width: 100%;"></video>
+              </div>
+            </div>
+            <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
+              <p class="video-label">Missed Grasp</p>
+              <div style="display: grid; gap: 0.65rem;">
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_miss2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_miss2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_miss2.mp4" style="width: 100%;"></video>
+              </div>
+            </div>
+            <div class="video-card" style="min-width: 0; scroll-snap-align: start;">
+              <p class="video-label">Slip</p>
+              <div style="display: grid; gap: 0.65rem;">
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/gt_slip2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/play_slip2.mp4" style="width: 100%;"></video>
+                <video autoplay muted controls loop playsinline preload="none" data-src="./videos/2_dynamic_pred/demo_slip2.mp4" style="width: 100%;"></video>
               </div>
             </div>
           </div>
