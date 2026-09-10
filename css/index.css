@@ -226,11 +226,11 @@ li {
 .venue {
   text-align: center;
   font-family: 'Space Grotesk', -apple-system, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #c45e00;
+  font-size: 19px;
+  font-weight: 400;
+  color: #1a1a1a;
   letter-spacing: 0.01em;
-  margin: 10px auto 4px auto;
+  margin: 0 auto 2px auto;
 }
 
 /* Authors block (polaris-style) */
@@ -349,7 +349,7 @@ li {
 
 @media (max-width: 600px) {
   .venue {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .authors {
